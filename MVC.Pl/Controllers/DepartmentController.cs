@@ -46,5 +46,46 @@ namespace MVC.Pl.Controllers
             var model = _departmentRepo.Get(id);
             return View(model);
         }
+
+        //Edit Item
+       
+        public IActionResult Edit(int id) 
+        {
+            var model = _departmentRepo.Get(id);
+            return View(model);
+        }
+
+        //Edit Item
+        [HttpPost]
+        public IActionResult Update(Department department)
+        {
+            if (ModelState.IsValid) 
+            {
+                int rowAffected = _departmentRepo.Update(department);
+                if (rowAffected >0)
+                {
+                    return RedirectToAction("Index");
+                }
+            }
+            return View("Edit",department);
+        }
+
+        //Delete
+        [HttpGet]
+        public IActionResult Delete(int id) 
+        {
+            var model = _departmentRepo.Get(id);
+            if (model == null) 
+            {
+                return Content("No Id Found", contentType: "text/html");
+            }
+            int deleted = _departmentRepo.Delete(model);
+            if (deleted == 0)
+            {
+                return Content("No Id Found for Model", contentType: "text/html");
+            }
+            return RedirectToAction("Index");
+
+        }
     }
 }
