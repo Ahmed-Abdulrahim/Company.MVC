@@ -38,5 +38,13 @@ namespace MVC.Pl.Controllers
             }
             return View(model);
         }
+
+        //Details
+        [HttpGet]
+        public IActionResult Details(int id) 
+        {
+            var model = _departmentRepo.Get(id);
+            return View(model);
+        }
     }
 }

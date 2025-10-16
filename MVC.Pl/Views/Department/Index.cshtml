@@ -28,7 +28,7 @@
                     <td >@item.Name</td>
                     <td>@item.CreatedAt.Date.ToString("dd/MM/yyyy")</td>
                     <td>
-                        <a asp-action="Details" class="btn btn-warning">Details</a>
+                        <a asp-action="Details" class="btn btn-warning" asp-route-id="@item.Id">Details</a>
                     </td>
                     <td>
                         <a asp-action="Update" class="btn btn-success">Update</a>
