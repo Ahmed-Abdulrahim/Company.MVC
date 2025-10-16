@@ -5,20 +5,16 @@
 }
 
 <h1>AllDepartment</h1>
-
 <a asp-action="Create" class="btn btn-primary m-5">Create Department</a>
-<br />
-<br />
-
 <table class="table table-bordered table-hover text-center">
     <thead>
         <tr>
-            <th >Code</th>
+            <th>Code</th>
             <th>Name</th>
-            <th >CreatedAt</th>
-            <th >Details</th>
-            <th >Update</th>
-            <th >Delete</th>
+            <th>CreatedAt</th>
+            <th>Details</th>
+            <th>Update</th>
+            <th>Delete</th>
 
         </tr>
     </thead>
@@ -46,7 +42,7 @@
         else
         {
             <tr>
-                <td rowspan="6">
+                <td colspan="6">
                     <h4 class="text-danger"> There is No Department :(</h4>
                 </td>
             </tr>

@@ -18,7 +18,25 @@ namespace MVC.Pl.Controllers
         {
             var model=_departmentRepo.GetAll();
             return View(model);
-           
+        }
+
+        //AddData From Form To Create Fun
+        public IActionResult Create() 
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Create(Department model)
+        {
+            if (ModelState.IsValid) 
+            {
+               int RoWAffected  = _departmentRepo.Add(model);
+                if (RoWAffected > 0) 
+                {
+                    return RedirectToAction("Index");
+                }
+            }
+            return View(model);
         }
     }
 }
