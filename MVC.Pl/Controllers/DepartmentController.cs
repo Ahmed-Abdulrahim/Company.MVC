@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MVC.BLL.Interfaces;
 using MVC.BLL.Repo;
+using MVC.DAL.Models;
 
 namespace MVC.Pl.Controllers
 {
@@ -17,6 +18,7 @@ namespace MVC.Pl.Controllers
         {
             var model=_departmentRepo.GetAll();
             return View(model);
+           
         }
     }
 }
