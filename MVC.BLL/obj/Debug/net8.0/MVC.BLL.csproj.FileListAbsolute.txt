@@ -1,0 +1,16 @@
+C:\Users\Administrator\Desktop\Temp\Company.MVC\MVC.BLL\bin\Debug\net8.0\MVC.BLL.deps.json
+C:\Users\Administrator\Desktop\Temp\Company.MVC\MVC.BLL\bin\Debug\net8.0\MVC.BLL.dll
+C:\Users\Administrator\Desktop\Temp\Company.MVC\MVC.BLL\bin\Debug\net8.0\MVC.BLL.pdb
+C:\Users\Administrator\Desktop\Temp\Company.MVC\MVC.BLL\bin\Debug\net8.0\MVC.DAL.dll
+C:\Users\Administrator\Desktop\Temp\Company.MVC\MVC.BLL\bin\Debug\net8.0\MVC.DAL.pdb
+C:\Users\Administrator\Desktop\Temp\Company.MVC\MVC.BLL\obj\Debug\net8.0\MVC.BLL.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\Temp\Company.MVC\MVC.BLL\obj\Debug\net8.0\MVC.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\Temp\Company.MVC\MVC.BLL\obj\Debug\net8.0\MVC.BLL.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\Temp\Company.MVC\MVC.BLL\obj\Debug\net8.0\MVC.BLL.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\Temp\Company.MVC\MVC.BLL\obj\Debug\net8.0\MVC.BLL.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\Temp\Company.MVC\MVC.BLL\obj\Debug\net8.0\MVC.BLL.sourcelink.json
+C:\Users\Administrator\Desktop\Temp\Company.MVC\MVC.BLL\obj\Debug\net8.0\MVC.BLL.csproj.Up2Date
+C:\Users\Administrator\Desktop\Temp\Company.MVC\MVC.BLL\obj\Debug\net8.0\MVC.BLL.dll
+C:\Users\Administrator\Desktop\Temp\Company.MVC\MVC.BLL\obj\Debug\net8.0\refint\MVC.BLL.dll
+C:\Users\Administrator\Desktop\Temp\Company.MVC\MVC.BLL\obj\Debug\net8.0\MVC.BLL.pdb
+C:\Users\Administrator\Desktop\Temp\Company.MVC\MVC.BLL\obj\Debug\net8.0\ref\MVC.BLL.dll

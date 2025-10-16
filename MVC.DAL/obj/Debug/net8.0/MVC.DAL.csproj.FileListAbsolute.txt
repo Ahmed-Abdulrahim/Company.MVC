@@ -1,0 +1,15 @@
+C:\Users\Administrator\Desktop\Temp\Company.MVC\MVC.DAL\bin\Debug\net8.0\MVC.DAL.deps.json
+C:\Users\Administrator\Desktop\Temp\Company.MVC\MVC.DAL\bin\Debug\net8.0\MVC.DAL.runtimeconfig.json
+C:\Users\Administrator\Desktop\Temp\Company.MVC\MVC.DAL\bin\Debug\net8.0\MVC.DAL.dll
+C:\Users\Administrator\Desktop\Temp\Company.MVC\MVC.DAL\bin\Debug\net8.0\MVC.DAL.pdb
+C:\Users\Administrator\Desktop\Temp\Company.MVC\MVC.DAL\obj\Debug\net8.0\MVC.DAL.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\Temp\Company.MVC\MVC.DAL\obj\Debug\net8.0\MVC.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\Temp\Company.MVC\MVC.DAL\obj\Debug\net8.0\MVC.DAL.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\Temp\Company.MVC\MVC.DAL\obj\Debug\net8.0\MVC.DAL.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\Temp\Company.MVC\MVC.DAL\obj\Debug\net8.0\MVC.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\Temp\Company.MVC\MVC.DAL\obj\Debug\net8.0\MVC.DAL.sourcelink.json
+C:\Users\Administrator\Desktop\Temp\Company.MVC\MVC.DAL\obj\Debug\net8.0\MVC.DAL.dll
+C:\Users\Administrator\Desktop\Temp\Company.MVC\MVC.DAL\obj\Debug\net8.0\refint\MVC.DAL.dll
+C:\Users\Administrator\Desktop\Temp\Company.MVC\MVC.DAL\obj\Debug\net8.0\MVC.DAL.pdb
+C:\Users\Administrator\Desktop\Temp\Company.MVC\MVC.DAL\obj\Debug\net8.0\MVC.DAL.genruntimeconfig.cache
+C:\Users\Administrator\Desktop\Temp\Company.MVC\MVC.DAL\obj\Debug\net8.0\ref\MVC.DAL.dll

@@ -1,12 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MVC.BLL.Interfaces;
 using MVC.BLL.Repo;
 
 namespace MVC.Pl.Controllers
 {
     public class DepartmentController : Controller
     {
-        private readonly DepartmentRepo _departmentRepo;
-        public DepartmentController(DepartmentRepo departmentRepo)
+        private readonly IDepartmentModule _departmentRepo;
+        public DepartmentController(IDepartmentModule departmentRepo)
         {
             _departmentRepo = departmentRepo;
         }
