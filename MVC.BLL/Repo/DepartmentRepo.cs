@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MVC.BLL.Repo
 {
-    public class DepartmentRepo : IDepartmentModule
+    public class DepartmentRepo : IEntityType<Department>
     {
         private readonly CompanyMvcContext _companyContext;
         public DepartmentRepo(CompanyMvcContext companyContext)

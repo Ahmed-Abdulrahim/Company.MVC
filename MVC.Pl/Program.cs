@@ -3,6 +3,7 @@ using Microsoft.Extensions.Options;
 using MVC.BLL.Interfaces;
 using MVC.BLL.Repo;
 using MVC.DAL.Data;
+using MVC.DAL.Models;
 
 namespace MVC.Pl
 {
@@ -14,7 +15,7 @@ namespace MVC.Pl
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-            builder.Services.AddScoped<IDepartmentModule, DepartmentRepo>();
+            builder.Services.AddScoped<IEntityType<Department>, DepartmentRepo>();
             builder.Services.AddDbContext<CompanyMvcContext>(options=>
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("conn1"));

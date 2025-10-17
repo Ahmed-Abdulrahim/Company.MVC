@@ -15,6 +15,7 @@ namespace MVC.DAL.Data
             
         }
         public DbSet<Department> Departments { get; set; }
+        public DbSet<Employee> Employees { get; set; }
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //{
         //    optionsBuilder.UseSqlServer("Data Source=WIN-Q618B842NC4\\SQLEXPRESS;Initial Catalog=CompanyMvc;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");

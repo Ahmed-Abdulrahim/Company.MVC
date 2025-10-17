@@ -8,8 +8,8 @@ namespace MVC.Pl.Controllers
 {
     public class DepartmentController : Controller
     {
-        private readonly IDepartmentModule _departmentRepo;
-        public DepartmentController(IDepartmentModule departmentRepo)
+        private readonly IEntityType<Department> _departmentRepo;
+        public DepartmentController(IEntityType<Department> departmentRepo)
         {
             _departmentRepo = departmentRepo;
         }
