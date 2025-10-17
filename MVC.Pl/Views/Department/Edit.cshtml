@@ -5,12 +5,7 @@
 
 <h1>Edit</h1>
 
-<form asp-action="Update">
-    <div class="my-3">
-      
-        <input asp-for="Id" value="@Model.Id" type="hidden" class="form-control" />
-       
-    </div>
+<form asp-action="Edit">
     <div class="my-3">
         <label asp-for="Code" class="col-form-label"></label>
         <input asp-for="Code" value="@Model.Code" class="form-control"  />
@@ -27,7 +22,7 @@
         <span asp-validation-for="CreatedAt" class="text-danger"></span>
     </div>
     <div>
-        <input type="submit" value="Update" class="btn btn-success m-5" />
+        <input type="submit" value="Save" class="btn btn-success m-5" />
         <a asp-action="Index" class="btn btn-success m-5">Back To List</a>
     </div>
 

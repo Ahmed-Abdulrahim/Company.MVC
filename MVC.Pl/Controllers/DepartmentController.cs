@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.DotNet.Scaffolding.Shared.Messaging;
 using MVC.BLL.Interfaces;
 using MVC.BLL.Repo;
 using MVC.DAL.Models;
@@ -41,40 +42,47 @@ namespace MVC.Pl.Controllers
 
         //Details
         [HttpGet]
-        public IActionResult Details(int id) 
+        public IActionResult Details(int? id , string viewName = "Details") 
         {
-            var model = _departmentRepo.Get(id);
-            return View(model);
+            if (id == null) return BadRequest("Invalid Id");
+            var model = _departmentRepo.Get(id.Value);
+            if (model == null) return NotFound("Not Found");
+            return View(viewName,model);
         }
 
         //Edit Item
-       
-        public IActionResult Edit(int id) 
+        [HttpGet]
+        public IActionResult Edit(int? id) 
         {
-            var model = _departmentRepo.Get(id);
-            return View(model);
+            //if (id == null) return BadRequest("Invalid Id");
+            //var model = _departmentRepo.Get(id.Value);
+            //if (model == null) return NotFound("Not Found");
+            return Details(id,"Edit");
         }
 
         //Edit Item
         [HttpPost]
-        public IActionResult Update(Department department)
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit([FromRoute]int? id,Department department)
         {
             if (ModelState.IsValid) 
             {
+                if (id != department.Id) return BadRequest("NotFound");
                 int rowAffected = _departmentRepo.Update(department);
                 if (rowAffected >0)
                 {
                     return RedirectToAction("Index");
                 }
             }
-            return View("Edit",department);
+            return View(department);
         }
 
         //Delete
         [HttpGet]
-        public IActionResult Delete(int id) 
+        public IActionResult Delete(int? id) 
         {
-            var model = _departmentRepo.Get(id);
+            if (id == null) return BadRequest("Invalid Id");
+            var model = _departmentRepo.Get(id.Value);
             if (model == null) 
             {
                 return Content("No Id Found", contentType: "text/html");

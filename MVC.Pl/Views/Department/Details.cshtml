@@ -3,27 +3,23 @@
     ViewData["Title"] = "Details";
 }
 <h1>Details</h1>
-<form asp-action="Edit" method="get">
+<form>
     <div class="my-3">
         <input type="hidden" asp-for="Id" value="@Model.Id" class="form-control" readonly />  
     </div>
     <div class="my-3">
         <label asp-for="Code" class="col-form-label"></label>
         <input asp-for="Code" value ="@Model.Code" class="form-control" readonly/>
-        <span asp-validation-for="Code" class="text-danger"></span>
     </div>
     <div class="my-3">
         <label asp-for="Name" class="col-form-label"></label>
         <input asp-for="Name" value="@Model.Name" class="form-control" readonly />
-        <span asp-validation-for="Name" class="text-danger"></span>
     </div>
     <div>
         <label asp-for="CreatedAt" class="col-form-label"></label>
         <input type="text" value="@Model.CreatedAt" class="form-control" readonly />
-        <span asp-validation-for="CreatedAt" class="text-danger"></span>
     </div>
     <div>
-        <input type="submit" value="Edit" class="btn btn-success m-5"  />
         <a asp-action="Index" class="btn btn-success m-5">Back To List</a>
     </div>
 
