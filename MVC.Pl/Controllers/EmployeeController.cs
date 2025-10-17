@@ -45,8 +45,45 @@ namespace MVC.Pl.Controllers
         {
             if (id == null) return NotFound();
             var Emp = employeeRepo.Get(id.Value);
-            if(Emp== null)return NotFound();
+            if(Emp== null)return BadRequest();
             return View(Emp);
+        }
+
+        //Edit
+        [HttpGet]
+        public IActionResult Edit(int? id) 
+        {
+            if(id == null) return NotFound();
+            var Emp = employeeRepo.Get(id.Value);
+            if(Emp==null)return BadRequest();
+            return View(Emp);
+        }
+
+        //Update
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit([FromRoute]int? id , Employee model)
+        {
+            if (ModelState.IsValid) 
+            {
+                if (id != model.Id) return BadRequest();
+                if (model == null) return NotFound();
+                var rowAffected = employeeRepo.Update(model);
+                if (rowAffected > 0) return RedirectToAction("Index");
+            }
+            return View(model);
+        }
+
+        //Delete
+        [HttpPost]
+        public IActionResult Delete(int? id)
+        {
+            if(id == null) return NotFound();
+            var Emp = employeeRepo.Get(id.Value);
+            if(Emp== null) return BadRequest();
+            var rowAffected = employeeRepo.Delete(Emp);
+            if (rowAffected > 0) return RedirectToAction("Index");
+            return Content("Failed To Delete", contentType: "text/html");
         }
     }
 }
