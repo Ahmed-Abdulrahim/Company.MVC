@@ -16,6 +16,8 @@ namespace MVC.Pl
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddScoped<IEntityType<Department>, DepartmentRepo>();
+            builder.Services.AddScoped<IEntityType<Employee>, EmployeeRepo>();
+
             builder.Services.AddDbContext<CompanyMvcContext>(options=>
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("conn1"));

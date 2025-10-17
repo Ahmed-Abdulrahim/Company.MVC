@@ -1,0 +1,59 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "Details";
+}
+<form >
+    <div class="my-3">
+        <label asp-for="Name" class="col-form-label"></label>
+        <input asp-for="Name" class="form-control" readonly />
+        
+    </div>
+    <div class="my-3">
+        <label asp-for="Age" class="col-form-label"></label>
+        <input asp-for="Age" class="form-control" readonly />
+        
+    </div>
+    <div>
+        <label asp-for="Email" class="col-form-label"></label>
+        <input asp-for="Email" class="form-control" readonly />
+       
+    </div>
+    <div>
+        <label asp-for="Address" class="col-form-label"></label>
+        <input asp-for="Address" class="form-control" readonly/>
+        
+    </div>    <div>
+        <label asp-for="phone" class="col-form-label"></label>
+        <input asp-for="phone" class="form-control" readonly />
+   
+    </div>
+    <div>
+        <label asp-for="Salary" class="col-form-label"></label>
+        <input asp-for="Salary" class="form-control" readonly />
+        
+    </div>
+    <div>
+        <input asp-for="IsActive" class="form-check" readonly/>
+        <label asp-for="IsActive" class="col-form-label"></label>
+    </div>
+    <div>
+        <input asp-for="IsDeleted" class="form-check" readonly />
+        <label asp-for="IsDeleted" class="col-form-label"></label>
+    </div>
+    <div>
+        <label asp-for="HiringDate" class="col-form-label"></label>
+        <input asp-for="HiringDate" class="form-control" readonly />
+       
+    </div>
+    <div>
+        <label asp-for="CreatedAt" class="col-form-label" ></label>
+        <input asp-for="CreatedAt" class="form-control" readonly/>
+     
+    </div>
+    <div>
+        <a asp-action="Index" class="btn btn-success m-5">Back To List</a>
+    </div>
+
+</form>
+
+
