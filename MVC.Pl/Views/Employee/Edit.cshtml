@@ -1,6 +1,8 @@
 ﻿@model Employee
 @{
     ViewData["Title"] = "Edit";
+    var Dept = new SelectList(ViewData["Dept"] as IEnumerable<Department>, "Id", "Name");
+
 }
 <form asp-action="Edit">
     <div class="my-3">
@@ -49,6 +51,12 @@
         <label asp-for="CreatedAt" class="col-form-label"></label>
         <input asp-for="CreatedAt" class="form-control" />
         <span asp-validation-for="CreatedAt" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="DeptId" class="col-form-label"></label>
+        <select asp-for="DeptId" asp-items="Dept">
+        </select>
+
     </div>
     <div>
         <input type="submit" value="Update" class="btn btn-primary" />

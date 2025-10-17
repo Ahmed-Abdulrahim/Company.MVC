@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,6 +34,9 @@ namespace MVC.DAL.Models
         public DateTime HiringDate { get; set; }
         [DisplayName("Date Of Create")]
         public DateTime CreatedAt { get; set; }
+        [ForeignKey("Departments")]
+        public int? DeptId { get; set; }
+        public Department? Departments { get; set; }
 
     }
 }

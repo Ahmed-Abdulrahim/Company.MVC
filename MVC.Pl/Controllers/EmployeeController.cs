@@ -7,10 +7,13 @@ namespace MVC.Pl.Controllers
     public class EmployeeController : Controller
     {
         private readonly IEntityType<Employee> employeeRepo;
+        private readonly IEntityType<Department> deptRepo;
 
-        public EmployeeController(IEntityType<Employee> _employee)
+
+        public EmployeeController(IEntityType<Employee> _employee , IEntityType<Department> _dept)
         {
             employeeRepo = _employee;
+            deptRepo = _dept;
         }
         //Display All Data
         public IActionResult Index()
@@ -23,6 +26,8 @@ namespace MVC.Pl.Controllers
         [HttpGet]
         public IActionResult Create() 
         {
+            var DeptList = deptRepo.GetAll();
+            ViewData["Dept"] = DeptList;
             return View();
         }
 
@@ -43,6 +48,7 @@ namespace MVC.Pl.Controllers
         [HttpGet]
         public IActionResult Details(int? id) 
         {
+           
             if (id == null) return NotFound();
             var Emp = employeeRepo.Get(id.Value);
             if(Emp== null)return BadRequest();
@@ -53,7 +59,9 @@ namespace MVC.Pl.Controllers
         [HttpGet]
         public IActionResult Edit(int? id) 
         {
-            if(id == null) return NotFound();
+            var DeptList = deptRepo.GetAll();
+            ViewData["Dept"] = DeptList;
+            if (id == null) return NotFound();
             var Emp = employeeRepo.Get(id.Value);
             if(Emp==null)return BadRequest();
             return View(Emp);

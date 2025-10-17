@@ -1,6 +1,7 @@
 ﻿@model Employee
 @{
     ViewData["Title"] = "Create";
+    var Dept = new SelectList(ViewData["Dept"] as IEnumerable<Department> ,"Id" , "Name");
 }
 
 <h1>Create Employee</h1>
@@ -53,9 +54,17 @@
         <span asp-validation-for="CreatedAt" class="text-danger"></span>
     </div>
     <div>
+        <label asp-for="DeptId" class="col-form-label"></label>
+       <select asp-for="DeptId" asp-items="Dept">
+          
+       </select>
+        
+    </div>
+    <div>
         <input type="submit" value="Create" class="btn btn-primary" />
         <a asp-action="Index" class="btn btn-success m-5">Back To List</a>
     </div>
+
 
 </form>
 @section ValidateData{

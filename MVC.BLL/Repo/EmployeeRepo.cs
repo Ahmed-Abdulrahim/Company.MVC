@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 using MVC.BLL.Interfaces;
 using MVC.DAL.Data;
 using MVC.DAL.Models;
@@ -18,9 +19,9 @@ namespace MVC.BLL.Repo
         {
             companyDbContext = _companyDbContext;
         }
-        public IEnumerable<Employee> GetAll() => companyDbContext.Employees.ToList();
+        public IEnumerable<Employee> GetAll() => companyDbContext.Employees.Include(d=>d.Departments).ToList();
 
-        public Employee? Get(int id) => companyDbContext.Employees.FirstOrDefault(d => d.Id == id);
+        public Employee? Get(int id) => companyDbContext.Employees.Include(d=>d.Departments).FirstOrDefault(d => d.Id == id);
 
 
         public int Add(Employee model)

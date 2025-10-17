@@ -19,5 +19,6 @@ namespace MVC.DAL.Models
         public string Name { get; set; }
         [Required(ErrorMessage = "CreatedAt is Required")]
         public DateTime CreatedAt { get; set; }
+        public List<Employee> Employees { get; set; }
     }
 }
